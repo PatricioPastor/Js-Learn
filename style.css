@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.form {
+    color: rgb(255, 226, 226);
+    text-shadow: #252525 2px 1px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #252525;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: #111111 0px 0px 16px;
+}
+
+.form-title {
+    margin: 8px;
+    text-shadow: #0e0909 2px 1px 6px;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+}
+.form-main input {
+    margin: 8px;
+    border: none;
+    height: 32px;
+    width: 100%;
+    padding: 9px;
+    background-color: transparent;
+    background: inherit;
+}
+
+input[type="submit"] {
+    background-color: #b92e2e;
+    font-weight: 600;
+    text-align: center;
+    color: azure;
+    text-shadow: #252525 2px 1px 4px;
+    padding: 3px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 6px;
+    margin:20px 10px 10px 10px;
+    width: 101%;
+    transition: 0.5s;
+    box-shadow: #1f1f1f 0px 0px 8px;
+}
+input[type="text"] {
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    border-bottom:2px solid #b92e2e56;
+    transition: 0.5s;
+}
+
+input[type="text"]:focus{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom:2px solid #b92e2e;
+}
+input[type="submit"]:focus, input[type="submit"]:hover {
+    outline: none;
+    background-color: #941717;
+}
+
+.notification {
+    position: relative;
+    display: inline-block;
+    max-width: 300px;
+    padding: 20px 15px;
+    border-radius: 4px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 4s linear forwards;
+}
+.progress {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background-image:linear-gradient(to right, #529bdb, #3250bf) ;
+    border-radius: 4px;
+    animation: progress 3s .25s linear forwards;
+}
+
+@keyframes fade {
+    5%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    95% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes progress {
+    to {
+        width: calc(100% - 10px);
+    }
+}
+
+.saludo {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+
+}
